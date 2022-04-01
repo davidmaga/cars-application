@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="dealer">
+      <h2 data-cy="dealerDetailsHeading"><span jhiTranslate="carsApp.dealer.detail.title">Dealer</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ dealer.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.dealer.name">Name</span></dt>
+        <dd>
+          <span>{{ dealer.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.dealer.description">Description</span></dt>
+        <dd>
+          <span>{{ dealer.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.dealer.photoPath">Photo Path</span></dt>
+        <dd>
+          <span>{{ dealer.photoPath }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.dealer.address">Address</span></dt>
+        <dd>
+          <span>{{ dealer.address }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.dealer.city">City</span></dt>
+        <dd>
+          <div *ngIf="dealer.city">
+            <a [routerLink]="['/city', dealer.city?.id, 'view']">{{ dealer.city?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/dealer', dealer.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

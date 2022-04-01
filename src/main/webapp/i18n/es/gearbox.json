@@ -1,0 +1,25 @@
+{
+  "carsApp": {
+    "gearbox": {
+      "home": {
+        "title": "Gearboxes",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Gearbox",
+        "createOrEditLabel": "Crear o editar Gearbox",
+        "notFound": "Ningún Gearboxes encontrado"
+      },
+      "created": "Un nuevo Gearbox ha sido creado con el identificador {{ param }}",
+      "updated": "Un Gearbox ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Gearbox ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Gearbox {{ id }}?"
+      },
+      "detail": {
+        "title": "Gearbox"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description"
+    }
+  }
+}

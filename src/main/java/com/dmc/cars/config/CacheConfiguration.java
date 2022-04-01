@@ -48,6 +48,17 @@ public class CacheConfiguration {
             createCache(cm, com.dmc.cars.domain.User.class.getName());
             createCache(cm, com.dmc.cars.domain.Authority.class.getName());
             createCache(cm, com.dmc.cars.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.dmc.cars.domain.Car.class.getName());
+            createCache(cm, com.dmc.cars.domain.Historic.class.getName());
+            createCache(cm, com.dmc.cars.domain.Photo.class.getName());
+            createCache(cm, com.dmc.cars.domain.Category.class.getName());
+            createCache(cm, com.dmc.cars.domain.Brand.class.getName());
+            createCache(cm, com.dmc.cars.domain.Model.class.getName());
+            createCache(cm, com.dmc.cars.domain.Fuel.class.getName());
+            createCache(cm, com.dmc.cars.domain.Gearbox.class.getName());
+            createCache(cm, com.dmc.cars.domain.Dealer.class.getName());
+            createCache(cm, com.dmc.cars.domain.City.class.getName());
+            createCache(cm, com.dmc.cars.domain.Region.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

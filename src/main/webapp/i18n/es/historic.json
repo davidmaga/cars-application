@@ -1,0 +1,26 @@
+{
+  "carsApp": {
+    "historic": {
+      "home": {
+        "title": "Historics",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Historic",
+        "createOrEditLabel": "Crear o editar Historic",
+        "notFound": "Ningún Historics encontrado"
+      },
+      "created": "Un nuevo Historic ha sido creado con el identificador {{ param }}",
+      "updated": "Un Historic ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Historic ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Historic {{ id }}?"
+      },
+      "detail": {
+        "title": "Historic"
+      },
+      "id": "ID",
+      "kms": "Kms",
+      "price": "Price",
+      "car": "Car"
+    }
+  }
+}

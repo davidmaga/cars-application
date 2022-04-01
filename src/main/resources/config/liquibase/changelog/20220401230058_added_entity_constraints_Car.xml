@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Car.
+    -->
+    <changeSet id="20220401230058-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="category_id"
+                                 baseTableName="car"
+                                 constraintName="fk_car__category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="category"/>
+
+        <addForeignKeyConstraint baseColumnNames="gearbox_id"
+                                 baseTableName="car"
+                                 constraintName="fk_car__gearbox_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="gearbox"/>
+
+        <addForeignKeyConstraint baseColumnNames="fuel_id"
+                                 baseTableName="car"
+                                 constraintName="fk_car__fuel_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="fuel"/>
+
+        <addForeignKeyConstraint baseColumnNames="model_id"
+                                 baseTableName="car"
+                                 constraintName="fk_car__model_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="model"/>
+
+        <addForeignKeyConstraint baseColumnNames="dealer_id"
+                                 baseTableName="car"
+                                 constraintName="fk_car__dealer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="dealer"/>
+    </changeSet>
+</databaseChangeLog>
