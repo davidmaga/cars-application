@@ -1,0 +1,106 @@
+entity Car {
+  	name String required,
+  	description String,
+  	engine String,
+  	power Integer,
+  	kms Integer,
+  	color String,
+  	doors Integer,
+  	seats Integer,
+  	buildingDate Instant,
+  	price Double,
+  	offer Boolean
+}
+
+entity Historic {
+    kms Integer,
+	price Double
+}
+
+entity Photo {
+	path String,
+    main Boolean
+}
+
+entity Category {
+	name String,
+ 	description String,
+ 	photoPath String
+}
+
+entity Brand {
+	name String,
+ 	description String,
+ 	photoPath String
+}
+
+entity Model {
+	name String,
+ 	description String
+}
+
+entity Fuel {
+	name String,
+ 	description String
+}
+
+entity Gearbox {
+	name String,
+ 	description String
+}
+
+entity Dealer {
+	name String,
+ 	description String,
+ 	photoPath String,
+    address String
+}
+
+entity City {
+	name String,
+ 	description String
+}
+
+entity Region {
+	name String,
+ 	description String
+}
+
+relationship OneToMany {
+	Car{historics} to Historic,
+    Car{photos} to Photo,
+    Category{cars} to Car,
+    Gearbox{cars} to Car,
+    Fuel{cars} to Car,
+    Model{cars} to Car,
+    Dealer{cars} to Car,
+    Brand{models} to Model,
+    City{dealers} to Dealer,
+    Region{cities} to City
+}
+
+relationship ManyToOne {
+	Historic{car} to Car,
+    Photo{car} to Car,
+    Car{category} to Category,
+    Car{gearbox} to Gearbox,
+    Car{fuel} to Fuel,
+    Car{model} to Model,
+    Car{dealer} to Dealer,
+    Model{brand} to Brand,
+    Dealer{city} to City,
+    City{region} to Region
+}
+
+// Set pagination options
+// paginate Car with infinite-scroll
+paginate Car with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
