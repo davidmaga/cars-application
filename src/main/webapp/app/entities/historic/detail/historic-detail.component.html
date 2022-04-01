@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="historic">
+      <h2 data-cy="historicDetailsHeading"><span jhiTranslate="carsApp.historic.detail.title">Historic</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ historic.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.historic.kms">Kms</span></dt>
+        <dd>
+          <span>{{ historic.kms }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.historic.price">Price</span></dt>
+        <dd>
+          <span>{{ historic.price }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.historic.car">Car</span></dt>
+        <dd>
+          <div *ngIf="historic.car">
+            <a [routerLink]="['/car', historic.car?.id, 'view']">{{ historic.car?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/historic', historic.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

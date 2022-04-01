@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20220401230105",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "gearbox",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Gearbox",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

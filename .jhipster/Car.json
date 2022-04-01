@@ -1,0 +1,92 @@
+{
+  "applications": "*",
+  "changelogDate": "20220401230058",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "car",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "engine",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "power",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "kms",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "color",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "doors",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "seats",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "buildingDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "offer",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Car",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "car",
+      "relationshipName": "category",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "gearbox",
+      "otherEntityRelationshipName": "car",
+      "relationshipName": "gearbox",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "fuel",
+      "otherEntityRelationshipName": "car",
+      "relationshipName": "fuel",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "model",
+      "otherEntityRelationshipName": "car",
+      "relationshipName": "model",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "dealer",
+      "otherEntityRelationshipName": "car",
+      "relationshipName": "dealer",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

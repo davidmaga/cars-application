@@ -1,0 +1,25 @@
+{
+  "carsApp": {
+    "fuel": {
+      "home": {
+        "title": "Fuels",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Fuel",
+        "createOrEditLabel": "Crear o editar Fuel",
+        "notFound": "Ningún Fuels encontrado"
+      },
+      "created": "Un nuevo Fuel ha sido creado con el identificador {{ param }}",
+      "updated": "Un Fuel ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Fuel ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Fuel {{ id }}?"
+      },
+      "detail": {
+        "title": "Fuel"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description"
+    }
+  }
+}

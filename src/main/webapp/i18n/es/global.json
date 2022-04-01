@@ -7,6 +7,17 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entidades",
+        "car": "Car",
+        "historic": "Historic",
+        "photo": "Photo",
+        "category": "Category",
+        "brand": "Brand",
+        "model": "Model",
+        "fuel": "Fuel",
+        "gearbox": "Gearbox",
+        "dealer": "Dealer",
+        "city": "City",
+        "region": "Region",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20220401230108",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "region",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Region",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

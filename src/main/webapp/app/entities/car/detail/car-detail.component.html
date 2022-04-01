@@ -1,0 +1,102 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="car">
+      <h2 data-cy="carDetailsHeading"><span jhiTranslate="carsApp.car.detail.title">Car</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ car.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.name">Name</span></dt>
+        <dd>
+          <span>{{ car.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.description">Description</span></dt>
+        <dd>
+          <span>{{ car.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.engine">Engine</span></dt>
+        <dd>
+          <span>{{ car.engine }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.power">Power</span></dt>
+        <dd>
+          <span>{{ car.power }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.kms">Kms</span></dt>
+        <dd>
+          <span>{{ car.kms }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.color">Color</span></dt>
+        <dd>
+          <span>{{ car.color }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.doors">Doors</span></dt>
+        <dd>
+          <span>{{ car.doors }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.seats">Seats</span></dt>
+        <dd>
+          <span>{{ car.seats }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.buildingDate">Building Date</span></dt>
+        <dd>
+          <span>{{ car.buildingDate | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.price">Price</span></dt>
+        <dd>
+          <span>{{ car.price }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.offer">Offer</span></dt>
+        <dd>
+          <span>{{ car.offer }}</span>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.category">Category</span></dt>
+        <dd>
+          <div *ngIf="car.category">
+            <a [routerLink]="['/category', car.category?.id, 'view']">{{ car.category?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.gearbox">Gearbox</span></dt>
+        <dd>
+          <div *ngIf="car.gearbox">
+            <a [routerLink]="['/gearbox', car.gearbox?.id, 'view']">{{ car.gearbox?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.fuel">Fuel</span></dt>
+        <dd>
+          <div *ngIf="car.fuel">
+            <a [routerLink]="['/fuel', car.fuel?.id, 'view']">{{ car.fuel?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.model">Model</span></dt>
+        <dd>
+          <div *ngIf="car.model">
+            <a [routerLink]="['/model', car.model?.id, 'view']">{{ car.model?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="carsApp.car.dealer">Dealer</span></dt>
+        <dd>
+          <div *ngIf="car.dealer">
+            <a [routerLink]="['/dealer', car.dealer?.id, 'view']">{{ car.dealer?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/car', car.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

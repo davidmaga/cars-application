@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20220401230059",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "historic",
+  "fields": [
+    {
+      "fieldName": "kms",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Historic",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "car",
+      "otherEntityRelationshipName": "historic",
+      "relationshipName": "car",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20220401230104",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "fuel",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Fuel",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

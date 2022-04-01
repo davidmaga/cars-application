@@ -1,0 +1,31 @@
+{
+  "applications": "*",
+  "changelogDate": "20220401230107",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "city",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "City",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "region",
+      "otherEntityRelationshipName": "city",
+      "relationshipName": "region",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20220401230106",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "dealer",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "photoPath",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Dealer",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "city",
+      "otherEntityRelationshipName": "dealer",
+      "relationshipName": "city",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
